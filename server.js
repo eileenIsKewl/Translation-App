@@ -60,6 +60,8 @@ app.post("/translate", async function(req, res) {
     }
 })
 
-app.listen(3000, function() {
-    console.log("PollyGlot running on http://localhost:3000")
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, function() {
+    console.log(`PollyGlot running on port ${PORT}`)
 })
